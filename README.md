@@ -52,6 +52,13 @@ $${\color{gray}(※ 아래는 프로젝트의 상세 내용 입니다.)}$$
 
 ---
 ### 📊 EDA
+- 1, 14와 같이 특정 클래스의 이미지 개수가 적은 것을 확인
+<div align='center'>
+  
+  ![image](https://github.com/user-attachments/assets/1800eee3-0b8a-4edf-b464-8b67be004a4e)
+
+</div>
+
 ### 문서 이미지 이해를 바탕으로 한 가설 수립
 
 #### 가설 1. Document Layout Classification, LayoutParser 문제로 해결할 수 있을 것이다.
@@ -146,6 +153,40 @@ $${\color{gray}(※ 아래는 프로젝트의 상세 내용 입니다.)}$$
     * **모델의 복잡성**: Transformer는 매우 복잡한 구조를 가지고 있어, 학습에 필요한 데이터의 양이 많음. 각 클래스에 대한 데이터가 적은 경우 일반화 성능 떨어졌을 것
 
 
+#### 모델 별 성능 평가
+
+<div align='center'>
+
+  | Model     | 2 step classifier | Augmentation | F1 score |
+  |-----------|-------------------|--------------|----------|
+  | Resnet34  | X                 | X            | 0.1967   |
+  | Resnet34  | O                 | X            | 0.6226   |
+  | ResNet18  | O                 | X            | 0.7985   |
+  | ResNet18  | O                 | O            | 0.8468   |
+  | ResNet101 | O                 | O            | 0.8650   |
+
+</div> 
+
+```
+- Augmentation 을 적용한 모델 학습 결과가 대체적으로 더 좋게 나온 것을 확인 
+```
+<div align='center'>
+  
+  ![image](https://github.com/user-attachments/assets/db397aae-6c18-4ff9-b99b-35f56bc74206)
+
+</div>
+
+```
+- Resnet34, 50, 101 을 기본 파라미터로 학습한 wandb 결과
+- 결과적으로 1차 분류기를 고정 후. 각 클래스의 모델을 다르게 하여 앙상블 한 모델이 가장 성능이 좋았음
+- 1차 분류기에서는 resnet 34의 성능이, paper 카테고리에서는 resnet101의 성능이 가장 좋았음
+```
+
+---
+### 🎯 결과 및 기대효과
+- **데이터 증강 효과**: Albumentations와 Augraphy를 통한 이미지 증강 기법이 데이터 다양성을 높이고, 모델의 일반화 성능을 향상시키는 데 기여
+- **비즈니스 적용 가능성**: 본 모델은 금융, 의료, 보험 등 다양한 산업 분야에서 실제 대량의 문서 이미지를 자동으로 분류할 수 있는 기반을 마련. 이는 기업의 문서 처리 효율성을 높이는데 기여
+- **OCR, Super resolution 기법**: 해당 프로젝트에서는 이러한 방법론들이 성능 향상으로 이어지지는 않았지만, 향후 문서 데이터에 대하여 이러한 기법을 적용해볼 수 있음음
 
  
 
