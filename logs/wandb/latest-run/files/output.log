@@ -1,0 +1,58 @@
+=======
+/data/ephemeral/home/upstage-cv-classification-cv-02/data/train.csv /data/ephemeral/home/upstage-cv-classification-cv-02/data/meta.csv
+=======
+=======
+/data/ephemeral/home/upstage-cv-classification-cv-02/data/train.csv /data/ephemeral/home/upstage-cv-classification-cv-02/data/meta.csv
+=======
+[2024-04-23 12:51:55,634][timm.models._builder][INFO] - Loading pretrained weights from Hugging Face hub (timm/resnet50.a1_in1k)
+[2024-04-23 12:51:55,944][timm.models._hub][INFO] - [timm/resnet50.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+Error executing job with overrides: ['mode=train', 'is_tuned=untuned']
+Traceback (most recent call last):
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 92, in _call_target
+    return _target_(*args, **kwargs)
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/lightning/pytorch/utilities/argparse.py", line 70, in insert_env_defaults
+    return fn(self, **kwargs)
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/lightning/pytorch/trainer/trainer.py", line 400, in __init__
+    self._accelerator_connector = _AcceleratorConnector(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/lightning/pytorch/trainer/connectors/accelerator_connector.py", line 147, in __init__
+    self._accelerator_flag = self._choose_gpu_accelerator_backend()
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/lightning/pytorch/trainer/connectors/accelerator_connector.py", line 367, in _choose_gpu_accelerator_backend
+    raise MisconfigurationException("No supported gpu backend found!")
+lightning.fabric.utilities.exceptions.MisconfigurationException: No supported gpu backend found!
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "main.py", line 24, in <module>
+    main()
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 14, in main
+    return train(config)
+  File "/data/ephemeral/home/upstage-cv-classification-cv-02/src/pipelines/pipeline.py", line 250, in train
+    _train(config)
+  File "/data/ephemeral/home/upstage-cv-classification-cv-02/src/pipelines/pipeline.py", line 63, in _train
+    trainer: Trainer = instantiate(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 347, in instantiate_node
+    return _call_target(_target_, partial, args, kwargs, full_key)
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 97, in _call_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error in call to target 'lightning.pytorch.trainer.trainer.Trainer':
+MisconfigurationException('No supported gpu backend found!')
+full_key: trainer

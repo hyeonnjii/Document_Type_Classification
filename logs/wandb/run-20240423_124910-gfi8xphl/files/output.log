@@ -1,0 +1,61 @@
+Error executing job with overrides: ['mode=train', 'is_tuned=untuned']
+Traceback (most recent call last):
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3800, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Main_class_name'
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "main.py", line 24, in <module>
+    main()
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 14, in main
+    return train(config)
+  File "/data/ephemeral/home/upstage-cv-classification-cv-02/src/pipelines/pipeline.py", line 250, in train
+    _train(config)
+  File "/data/ephemeral/home/upstage-cv-classification-cv-02/src/pipelines/pipeline.py", line 53, in _train
+    train_loader = setup.get_train_loader(main_class=main_class)
+  File "/data/ephemeral/home/upstage-cv-classification-cv-02/src/utils/setup.py", line 38, in get_train_loader
+    return DataLoader(
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 350, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/torch/utils/data/sampler.py", line 142, in __init__
+    if not isinstance(self.num_samples, int) or self.num_samples <= 0:
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/torch/utils/data/sampler.py", line 149, in num_samples
+    return len(self.data_source)
+  File "/data/ephemeral/home/upstage-cv-classification-cv-02/src/datasets/doc_images_dataset.py", line 40, in __len__
+    return len(self.labels)
+  File "/opt/conda/envs/myenv/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/data/ephemeral/home/upstage-cv-classification-cv-02/src/datasets/doc_images_dataset.py", line 116, in labels
+    self.data["Main_class_name"]
+  File "/data/ephemeral/home/upstage-cv-classification-cv-02/src/datasets/doc_images_dataset.py", line 81, in data
+    label_encoder.fit(data["Main_class_name"])
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/pandas/core/frame.py", line 3805, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/opt/conda/envs/myenv/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3802, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Main_class_name'
+=======
+/data/ephemeral/home/upstage-cv-classification-cv-02/data/train.csv /data/ephemeral/home/upstage-cv-classification-cv-02/data/meta.csv
+=======

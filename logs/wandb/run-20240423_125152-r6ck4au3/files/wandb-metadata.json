@@ -1,0 +1,282 @@
+{
+    "os": "Linux-5.4.0-166-generic-x86_64-with-glibc2.17",
+    "python": "3.8.19",
+    "heartbeatAt": "2024-04-23T03:51:53.368114",
+    "startedAt": "2024-04-23T03:51:52.321480",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "mode=train",
+        "is_tuned=untuned"
+    ],
+    "state": "running",
+    "program": "main.py",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/UpstageAILab2/upstage-cv-classification-cv-02.git",
+        "commit": "09835ce3ecab6a936aecd8682d83711ece0e3b01"
+    },
+    "email": null,
+    "root": "/data/ephemeral/home/upstage-cv-classification-cv-02",
+    "host": "instance-8231",
+    "username": "root",
+    "executable": "/opt/conda/envs/myenv/bin/python",
+    "cpu_count": 24,
+    "cpu_count_logical": 48,
+    "cpu_freq": {
+        "current": 3404.9492291666666,
+        "min": 2200.0,
+        "max": 3800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4111.475,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2569.959,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2058.226,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2662.126,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4111.509,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 3754.565,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1932.801,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2212.055,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 3719.01,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2823.288,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4108.555,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2119.073,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4108.174,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4106.723,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4116.817,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2735.05,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4099.941,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 3740.307,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2301.265,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4107.892,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4113.77,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2829.179,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2834.373,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2947.32,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4108.631,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 3766.125,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2169.336,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2325.326,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4112.142,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4096.188,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1909.821,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1933.141,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2780.773,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2711.59,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4097.776,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2258.147,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4117.252,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4101.828,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4099.325,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2735.053,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4094.282,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2930.609,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2300.073,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4113.729,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 4111.997,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2927.912,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 3020.731,
+            "min": 2200.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2830.664,
+            "min": 2200.0,
+            "max": 3800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1830.7268676757812,
+            "used": 167.75107192993164
+        }
+    },
+    "memory": {
+        "total": 251.61731338500977
+    }
+}
