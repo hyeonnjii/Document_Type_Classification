@@ -41,13 +41,7 @@ $${\color{gray}(※ 아래는 프로젝트의 상세 내용 입니다.)}$$
 │   ├── ff8a6a251ce51c95.jpg  # 이미지 파일 1569
 │   └── ffc22136f958deb1.jpg  # 이미지 파일 1570
 │
-├── train.csv               # 이미지 파일명과 정답 클래스 번호를 포함한 CSV 파일
-│
-└── meta.csv                # 클래스 번호와 클래스 이름을 포함한 메타데이터 CSV 파일
-
-```
-
-* 데이터 출처: Upstage 'Document Type Classification' 대회 데이터(비공개 데이터)
+├── train.csv               # 이미지 파일명과 정답 클드
 
 
 ---
