@@ -113,6 +113,40 @@ $${\color{gray}(※ 아래는 프로젝트의 상세 내용 입니다.)}$$
 
 </div>
 
+
+---
+### 🧠 모델링
+#### 평가 지표
+- [Macro F1 Score](https://www.linkedin.com/pulse/understanding-confusion-matrix-tanvi-mittal/)
+  * Macro F1 score는 multi classification을 위한 평가 지표로 클래스 별로 계산된 F1 score를 단순 평균한 지표
+  
+
+<div align='center'>
+  
+  ![image](https://quicklatex.com/cache3/ec/ql_37c43c91b217bd926d84481131e1bcec_l3.png)
+
+</div>
+
+    * N: 클래스의 수
+    * F1_i: 각 클래스의 F1 점수. F1 점수는 정밀도와 재현율의 조화 평균으로 계산
+    
+
+
+#### 모델링 전략
+- **Class 별 Augmentation**: 평가 데이터를 모방한 학습 데이터를 구축
+- **2 Step Classifier**: Car, License, Paper 먼저 분류 후, 각 그룹내에서 실제 Type을 구분하는 2 Step Classifier 학습
+
+
+#### 모델 선정
+
+- Transformer 계열 vs. **CNN 계열**✔
+  - 문서 데이터의 낮은 해상도와 데이터 수의 부족으로 인해 Transformer 계열 모델이 제대로 학습되지 않음을 확인
+  - **문서 데이터, 모델의 특성을 고려하여 CNN 계열의 ResNet, EfficientNet 사용**
+    * **데이터 특성**: Transformer 모델은 일반적으로 고해상도 이미지나 대량의 데이터에서 뛰어난 성능을 발휘. 그러나 문서 데이터는 낮은 해상도와 데이터 수의 부족으로 인해 모델이 필요한 정보를 충분히 학습하기 어려웠을 것
+    * **모델의 복잡성**: Transformer는 매우 복잡한 구조를 가지고 있어, 학습에 필요한 데이터의 양이 많음. 각 클래스에 대한 데이터가 적은 경우 일반화 성능 떨어졌을 것
+
+
+
  
 
 
